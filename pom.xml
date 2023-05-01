@@ -51,28 +51,36 @@
 				<artifactId>common-db</artifactId>
 				<version>${boot.jx.version}</version>
 			</dependency>
-
-			<dependency>
-				<groupId>com.boot.jx</groupId>
-				<artifactId>common-table</artifactId>
-				<version>${boot.jx.version}</version>
-			</dependency>
 			<dependency>
 				<groupId>com.boot.jx</groupId>
 				<artifactId>common-tmpl</artifactId>
 				<version>${boot.jx.version}</version>
 			</dependency>
+			<dependency>
+				<groupId>com.boot.jx</groupId>
+				<artifactId>bootjx-rbac</artifactId>
+				<version>${boot.jx.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.boot.jx</groupId>
+				<artifactId>bootjx-session</artifactId>
+				<version>${boot.jx.version}</version>
+			</dependency>
 
 			<dependency>
 				<groupId>com.boot.jx</groupId>
-				<artifactId>common-lib-rbac</artifactId>
+				<artifactId>bootjx-extjar</artifactId>
 				<version>${boot.jx.version}</version>
-			</dependency>	
+				<type>pom</type>
+			</dependency>
+
 			<dependency>
 				<groupId>com.boot.jx</groupId>
-				<artifactId>common-lib-session</artifactId>
+				<artifactId>bootjx-table</artifactId>
 				<version>${boot.jx.version}</version>
-			</dependency>	
+			</dependency>
+
+
 		</dependencies>
 	</dependencyManagement>
 
@@ -132,6 +140,11 @@
 	<modules>
 		<!-- Common Libs -->
 		<module>bootjx-common</module>
+		<module>bootjx-ext-jar</module>
+		<module>bootjx-table</module>
+		<module>bootjx-session</module>
+		<module>bootjx-rbac</module>
+		<module>../bootjx-extjar</module>
 		<!-- Common Servers -->
 	</modules>
 </project>
