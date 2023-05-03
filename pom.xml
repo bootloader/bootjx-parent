@@ -139,8 +139,6 @@
 
 	<modules>
 		<!-- Common Libs -->
-		<module>bootjx-common</module>
-		<module>bootjx-ext-jar</module>
 		<module>bootjx-table</module>
 		<module>bootjx-session</module>
 		<module>bootjx-rbac</module>
