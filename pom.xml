@@ -32,32 +32,6 @@
 		<dependencies>
 			<dependency>
 				<groupId>com.boot.jx</groupId>
-				<artifactId>common-utils</artifactId>
-				<version>${boot.jx.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>com.boot.jx</groupId>
-				<artifactId>common-lib</artifactId>
-				<version>${boot.jx.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>com.boot.jx</groupId>
-				<artifactId>common-mongo</artifactId>
-				<version>${boot.jx.version}</version>
-			</dependency>
-
-			<dependency>
-				<groupId>com.boot.jx</groupId>
-				<artifactId>common-db</artifactId>
-				<version>${boot.jx.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>com.boot.jx</groupId>
-				<artifactId>common-tmpl</artifactId>
-				<version>${boot.jx.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>com.boot.jx</groupId>
 				<artifactId>bootjx-rbac</artifactId>
 				<version>${boot.jx.version}</version>
 			</dependency>
@@ -69,18 +43,16 @@
 
 			<dependency>
 				<groupId>com.boot.jx</groupId>
-				<artifactId>bootjx-extjar</artifactId>
-				<version>${boot.jx.version}</version>
-				<type>pom</type>
-			</dependency>
-
-			<dependency>
-				<groupId>com.boot.jx</groupId>
 				<artifactId>bootjx-table</artifactId>
 				<version>${boot.jx.version}</version>
 			</dependency>
 
-
+			<dependency>
+				<groupId>com.boot.jx</groupId>
+				<artifactId>bootjx-extjar</artifactId>
+				<version>${boot.jx.version}</version>
+				<type>pom</type>
+			</dependency>
 		</dependencies>
 	</dependencyManagement>
 
