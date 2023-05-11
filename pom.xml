@@ -17,15 +17,14 @@
 	<parent>
 		<groupId>com.boot.jx</groupId>
 		<artifactId>bootjx-common</artifactId>
-		<version>0.0.1-SNAPSHOT</version>
+		<version>0.0.2-SNAPSHOT</version>
 		<relativePath>../bootjx-common/pom.xml</relativePath>
 	</parent>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<java.version>1.8</java.version>
-		<boot.jx.version>0.0.1-SNAPSHOT</boot.jx.version>
-		<vzn>0.0.1-SNAPSHOT</vzn>
+		<boot.jx.version>0.0.2-SNAPSHOT</boot.jx.version>
 	</properties>
 
 	<dependencyManagement>
@@ -117,4 +116,13 @@
 		<module>../bootjx-extjar</module>
 		<!-- Common Servers -->
 	</modules>
+	
+	<distributionManagement>
+	   <repository>
+	     <id>github</id>
+	     <name>GitHub bootloader Apache Maven Packages</name>
+	     <url>https://maven.pkg.github.com/bootloader/bootloader.github.io</url>
+	   </repository>
+	</distributionManagement>
+	
 </project>
