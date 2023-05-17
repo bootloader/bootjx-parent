@@ -13,7 +13,7 @@ public class RbacRole {
 
     @Id
     private String id;
-    @Indexed(unique = true, direction = IndexDirection.DESCENDING, dropDups = true)
+    @Indexed(unique = true, direction = IndexDirection.DESCENDING)
 
     private String role;
 

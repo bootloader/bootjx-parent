@@ -1,9 +1,9 @@
 package com.boot.jx.session.bc;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-
 import org.springframework.boot.web.servlet.server.Session;
+
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 
 public class HeaderHttpSessionStrategy implements HttpSessionStrategy {
 

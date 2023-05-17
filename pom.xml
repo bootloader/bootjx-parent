@@ -17,14 +17,13 @@
 	<parent>
 		<groupId>com.boot.jx</groupId>
 		<artifactId>bootjx-common</artifactId>
-		<version>0.0.2-SNAPSHOT</version>
-		<relativePath>../bootjx-common/pom.xml</relativePath>
+		<version>0.0.3-SNAPSHOT</version>
 	</parent>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<java.version>1.8</java.version>
-		<boot.jx.version>0.0.2-SNAPSHOT</boot.jx.version>
+		<java.version>17</java.version>
+		<boot.jx.version>0.0.3-SNAPSHOT</boot.jx.version>
 	</properties>
 
 	<dependencyManagement>
@@ -65,8 +64,8 @@
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
 				<configuration>
-					<source>1.8</source>
-					<target>1.8</target>
+					<source>17</source>
+					<target>17</target>
 				</configuration>
 			</plugin>
 		</plugins>
@@ -113,7 +112,6 @@
 		<module>bootjx-table</module>
 		<module>bootjx-session</module>
 		<module>bootjx-rbac</module>
-		<module>../bootjx-extjar</module>
 		<!-- Common Servers -->
 	</modules>
 	
