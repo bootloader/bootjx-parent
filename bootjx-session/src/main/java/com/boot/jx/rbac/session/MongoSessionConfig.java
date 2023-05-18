@@ -3,6 +3,8 @@ package com.boot.jx.rbac.session;
 import java.time.Duration;
 import java.util.Collections;
 
+import javax.annotation.PostConstruct;
+
 import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
@@ -20,8 +22,6 @@ import com.fasterxml.jackson.core.Version;
 import com.fasterxml.jackson.databind.Module;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.module.SimpleModule;
-
-import jakarta.annotation.PostConstruct;
 
 @Configuration
 @ConditionalOnProperty(name = "spring.session.store-type", havingValue = "mongodb")

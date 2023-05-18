@@ -1,11 +1,11 @@
 package com.boot.loaderjs;
 
 
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.Assert.assertTrue;
 
 import java.util.Locale;
 
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -34,24 +34,24 @@ public class LanguageTest {
 	@Test
 	public void testLanguageEnumFromNumber() {
 		Language lang = Language.fromId(Language.PH.getBDCode());
-		assertTrue( lang == Language.TL, "Lang is not TL");
+		assertTrue("Lang is not TL", lang == Language.TL);
 	}
 
 	@Test
 	public void testLanguageFromAlias() {
 		Language lang = Language.fromString("ph", Language.EN);
-		assertTrue(lang == Language.TL, "Lang is not TL");
+		assertTrue("Lang is not TL", lang == Language.TL);
 	}
 
 	@Test
 	public void testLanguageFromStringWithDefault() {
 		Language lang = (Language) ArgUtil.parseAsEnum("ph", Language.EN, Language.class);
-		assertTrue( lang == Language.PH, "Lang is not PH");
+		assertTrue(  "Lang is not PH", lang == Language.PH);
 	}
 
 	@Test
 	public void testLanguageFromString() {
 		Language lang = (Language) ArgUtil.parseAsEnum("ph", Language.class);
-		assertTrue(lang == Language.PH, "Lang is not PH");
+		assertTrue("Lang is not PH", lang == Language.PH);
 	}
 }

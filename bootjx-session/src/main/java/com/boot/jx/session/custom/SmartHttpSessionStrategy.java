@@ -1,14 +1,14 @@
 package com.boot.jx.session.custom;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
 import org.apache.commons.lang.StringUtils;
 import org.springframework.boot.web.servlet.server.Session;
 
 import com.boot.jx.session.bc.CookieHttpSessionStrategy;
 import com.boot.jx.session.bc.HeaderHttpSessionStrategy;
 import com.boot.jx.session.bc.HttpSessionStrategy;
-
-import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpServletResponse;
 
 public class SmartHttpSessionStrategy implements HttpSessionStrategy {
 	private CookieHttpSessionStrategy browser;

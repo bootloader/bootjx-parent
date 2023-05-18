@@ -1,9 +1,9 @@
 package com.boot.jx.session.bc;
 
-import org.springframework.boot.web.servlet.server.Session;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
-import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpServletResponse;
+import org.springframework.boot.web.servlet.server.Session;
 
 public class CookieHttpSessionStrategy implements HttpSessionStrategy {
 
