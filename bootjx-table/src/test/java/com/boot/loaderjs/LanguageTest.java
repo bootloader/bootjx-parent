@@ -1,11 +1,10 @@
 package com.boot.loaderjs;
 
-
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.Assert.assertTrue;
 
 import java.util.Locale;
 
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -24,9 +23,8 @@ public class LanguageTest {
 
 		Locale[] locales = Locale.getAvailableLocales();
 		for (Locale locale : locales) {
-			LOGGER.info("{} - {} - {} - {}", locale.toString(), locale.getISO3Language(),
-				locale.getLanguage(),
-				locale.getDisplayName());
+			LOGGER.info("{} - {} - {} - {}", locale.toString(), locale.getISO3Language(), locale.getLanguage(),
+					locale.getDisplayName());
 		}
 
 	}
@@ -34,24 +32,28 @@ public class LanguageTest {
 	@Test
 	public void testLanguageEnumFromNumber() {
 		Language lang = Language.fromId(Language.PH.getBDCode());
-		assertTrue( lang == Language.TL, "Lang is not TL");
+		assertTrueLocal(lang == Language.TL, "Lang is not TL");
 	}
 
 	@Test
 	public void testLanguageFromAlias() {
 		Language lang = Language.fromString("ph", Language.EN);
-		assertTrue(lang == Language.TL, "Lang is not TL");
+		assertTrueLocal(lang == Language.TL, "Lang is not TL");
+	}
+
+	private void assertTrueLocal(boolean b, String string) {
+		assertTrue(string, b);
 	}
 
 	@Test
 	public void testLanguageFromStringWithDefault() {
 		Language lang = (Language) ArgUtil.parseAsEnum("ph", Language.EN, Language.class);
-		assertTrue( lang == Language.PH, "Lang is not PH");
+		assertTrueLocal(lang == Language.PH, "Lang is not PH");
 	}
 
 	@Test
 	public void testLanguageFromString() {
 		Language lang = (Language) ArgUtil.parseAsEnum("ph", Language.class);
-		assertTrue(lang == Language.PH, "Lang is not PH");
+		assertTrueLocal(lang == Language.PH, "Lang is not PH");
 	}
 }
