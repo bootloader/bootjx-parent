@@ -46,12 +46,6 @@
 			<artifactId>jackson-dataformat-csv</artifactId>
 		</dependency>
 
-		<dependency>
-			<groupId>com.fasterxml.jackson.dataformat</groupId>
-			<artifactId>jackson-dataformat-xml</artifactId>
-			<version>2.9.6</version>
-		</dependency>
-
 		<!-- Spring Shared Session Requirements https://stackoverflow.com/questions/34599327/error-in-spring-boot-session-with-redis-no-qualifying-bean-of-type-session?rq=1 -->
 
 		<dependency>
